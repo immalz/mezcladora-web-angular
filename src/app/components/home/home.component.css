@@ -1,0 +1,330 @@
+.landing {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+
+/*------------OBJETIVO--------------*/
+
+.objetivo {
+    width: 100%;
+    height: 20vh;
+    background: var(--bg-light);
+    display: flex;
+}
+
+.objetivo__texto {
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.objetivo__texto h2 {
+    margin: 0 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.objetivo__texto span {
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
+.objetivo__boton {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.objetivo__boton a button {
+    padding: 15px 15px;
+    background: var(--color-principal);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 10px;
+    color: white;
+}
+
+
+/*-------------MARCAS--------------*/
+
+.marca {
+    width: 80%;
+    margin: auto;
+}
+
+.marca__titulo {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.marca__titulo .barra {
+    width: 200px;
+    height: 3px;
+    background-color: var(--color-principal);
+}
+
+.marca__titulo h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.marca__contenido {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.marca__contenido .tarjeta {
+    width: 330px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 25px 20px 20px rgba(0, 0, 0, 0.04);
+    transition: .4s ease;
+    margin: 10px 0;
+}
+
+.marca__contenido .tarjeta:hover {
+    box-shadow: 25px 20px 20px rgba(0, 0, 0, 0.09);
+}
+
+.marca__contenido .tarjeta__imagen {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.marca__contenido .tarjeta__imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta__imagen--boton {
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--rojo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s ease;
+}
+
+.tarjeta__imagen--boton:hover {
+    transform: scale(1.2);
+    transition: .4s ease;
+}
+
+.tarjeta__imagen--boton a {
+    color: #fff;
+}
+
+.tarjeta__imagen--boton a i {
+    font-size: 20px;
+}
+
+.marca__contenido .tarjeta__texto {
+    padding: 20px;
+}
+
+.marca__contenido .tarjeta__texto h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.marca__contenido .tarjeta__texto p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+/*-------------ANUNCIO--------------*/
+
+.anuncio {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.anuncio__arriba {
+    width: 100%;
+    height: 150px;
+    background: var(--bg-light);
+}
+
+.anuncio__abajo {
+    width: 100%;
+    min-height: 300px;
+    background: orange;
+    display: flex;
+}
+
+.anuncio__abajo .texto {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.anuncio__abajo .texto h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.anuncio__abajo .texto h2 span {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.anuncio__abajo .texto a {
+    width: 110px;
+}
+
+.anuncio__abajo .texto a button {
+    margin: 20px 0;
+    padding: 10px 15px;
+    color: #fff;
+    background: var(--bg-dark);
+    border-radius: 5px;
+    border: none;
+    font-weight: 200;
+    cursor: pointer;
+    transition: .7s ease;
+}
+
+.anuncio__abajo .texto a:hover button {
+    color: var(--bg-dark);
+    background: #fff;
+    transition: .7s ease;
+}
+
+.anuncio__abajo .imagen {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anuncio__abajo .imagen img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*-------------PROYECTOS--------------*/
+
+.proyectos {
+    margin-bottom: 80px;
+    width: 80%;
+    margin: auto;
+    min-height: 500px;
+}
+
+.proyecto__video {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.proyecto__video .video iframe {
+    width: 330px;
+    height: 200px;
+}
+
+
+/*-------------RESPONSIVE--------------*/
+
+@media (max-width: 1000px) {
+    .objetivo__texto h2 {
+        font-size: 1rem;
+    }
+    .objetivo__boton a button {
+        padding: 10px 10px;
+        font-size: 13px;
+    }
+    .anuncio__abajo {
+        width: 100%;
+        min-height: 300px;
+        background: orange;
+        display: flex;
+        flex-direction: column;
+    }
+    .anuncio__abajo .texto,
+    .anuncio__abajo .imagen {
+        width: 100%;
+    }
+    .anuncio__abajo .texto {
+        padding: 30px;
+    }
+    .anuncio__abajo .imagen img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 950px) {
+    .marca__titulo h2 {
+        font-size: 2rem;
+        line-height: 30px;
+        text-align: center;
+    }
+    .marca__titulo .barra {
+        width: 120px;
+    }
+    .marca__contenido .tarjeta {
+        width: 280px;
+        height: 400px;
+    }
+    .marca__contenido .tarjeta__texto {
+        padding: 5px 20px;
+    }
+    .marca__contenido .tarjeta__texto p {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .objetivo__texto {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .objetivo__boton {
+        display: none;
+    }
+    .anuncio__abajo .texto h2 {
+        font-size: 1.2rem;
+    }
+    .anuncio__abajo .texto {
+        padding: 30px 20px;
+    }
+}
+
+.slideshow-text {
+    letter-spacing: 10px;
+}
+
+@media (max-width: 767px) {
+    .slideshow-text {
+        font-size: 40px;
+    }
+}

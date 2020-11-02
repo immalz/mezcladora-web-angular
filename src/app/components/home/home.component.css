@@ -2,6 +2,126 @@
     width: 100%;
     height: 80vh;
     position: relative;
+    overflow: hidden;
+}
+
+.landing .fondo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #A3D6DB;
+    width: 100%;
+    height: 100%;
+    animation-name: fondo;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.landing .sol {
+    background: #FFA500;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: -110px;
+    top: 30%;
+    border-radius: 100px;
+    box-shadow: 0px 0px 0px 10px rgba(255, 140, 0, 0.5);
+    animation-name: sol;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.landing .nubes {
+    background: url(../../../assets/images/fondo1.png);
+    /* background: url("assets/images/fondo1.png"); */
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 10%;
+    left: 0px;
+    width: 100%;
+    height: 174px;
+    animation-name: nubes;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.landing .ciudad {
+    background: url(../../../assets/images/ciudad.png);
+    background-repeat: repeat-x;
+    background-position: 0px 100%;
+    position: absolute;
+    top: 10%;
+    left: 0px;
+    width: 100%;
+    height: 90%;
+    animation-name: ciudad;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.landing .camion {
+    width: 145px;
+    height: 80px;
+    position: absolute;
+    bottom: 9%;
+    left: 50%;
+    text-align: center;
+}
+
+.landing .camion .marco {
+    background-image: url(../../../assets/images/cursor.gif);
+    width: 98px;
+    height: 65px;
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+}
+
+@keyframes sol {
+    0% {
+        left: -110px;
+        top: 30%;
+    }
+    50% {
+        left: 50%;
+        top: 5%;
+        background: #FF4500;
+    }
+    100% {
+        left: calc(100% + 10px);
+        top: 30%;
+        background: #bee2e6;
+        box-shadow: 0px 0px 0px 10px rgba(73, 92, 95, 0.5);
+    }
+}
+
+@keyframes fondo {
+    50% {
+        background: #A3D6DB;
+    }
+    100% {
+        background: #103D42;
+    }
+}
+
+@keyframes nubes {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes ciudad {
+    from {
+        background-position: 0 100%;
+    }
+    to {
+        background-position: 100% 100%;
+    }
 }
 
 
@@ -103,16 +223,22 @@
     box-shadow: 25px 20px 20px rgba(0, 0, 0, 0.09);
 }
 
+.marca__contenido .tarjeta:hover .tarjeta__imagen img {
+    transform: scale(1.1) rotate(2deg);
+}
+
 .marca__contenido .tarjeta__imagen {
     width: 100%;
     height: 50%;
     position: relative;
+    overflow: hidden;
 }
 
 .marca__contenido .tarjeta__imagen img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: .4s ease;
 }
 
 .tarjeta__imagen--boton {

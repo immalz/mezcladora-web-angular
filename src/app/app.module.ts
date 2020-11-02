@@ -7,6 +7,10 @@ import { AppComponent } from './app.component';
 // Pipes
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 
+// Servicios
+import { Categorias } from './services/categorias.service';
+
+
 // Rutas
 import { ROUTES } from './app.routes';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -14,7 +18,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
-import { CardComponent } from './components/cards/card/card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +29,16 @@ import { CardComponent } from './components/cards/card/card.component';
     AboutComponent,
     DomseguroPipe,
     LoadingComponent,
-    CardComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot( ROUTES, {useHash: true} ),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    Categorias
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

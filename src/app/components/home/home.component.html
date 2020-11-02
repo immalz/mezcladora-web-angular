@@ -1,5 +1,11 @@
 <section class="landing">
-
+    <div class="fondo"></div>
+    <div class="sol"></div>
+    <div class="nubes"></div>
+    <div class="ciudad"></div>
+    <div class="camion">
+        <div class="marco"></div>
+    </div>
 </section>
 
 <section class="objetivo">
@@ -7,7 +13,7 @@
         <h2>En <span>GRUINCASAS</span> nos preocupamos por entregar un producto de maxima calidad que supere las expectativas de nuestro clientes</h2>
     </div>
     <div class="objetivo__boton">
-        <a href="./pages/contacto.html"><button>Solicitar Cotización</button></a>
+        <a routerLink="contacto"><button routerLink="contacto">Solicitar Cotización</button></a>
     </div>
 </section>
 
@@ -17,42 +23,20 @@
         <div class="barra"></div>
     </div>
     <div class="marca__contenido">
-        <div class="tarjeta">
+
+        <div class="tarjeta" *ngFor="let marca of marcas">
             <div class="tarjeta__imagen">
-                <img src="./assets/images/tarjeta1.jpg">
+                <img [src]="marca.imagen">
                 <div class="tarjeta__imagen--boton">
                     <a href="#"><i class="fas fa-share"></i></a>
                 </div>
             </div>
             <div class="tarjeta__texto">
-                <h3>Camiones</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi rerum eum odit quam dolores iure accusamus quo perspiciatis ipsam aliquid?</p>
+                <h3>{{marca.titulo}}</h3>
+                <p>{{marca.texto}}</p>
             </div>
         </div>
-        <div class="tarjeta">
-            <div class="tarjeta__imagen">
-                <img src="./assets/images/tarjeta2.jpg">
-                <div class="tarjeta__imagen--boton">
-                    <a href="#"><i class="fas fa-share"></i></a>
-                </div>
-            </div>
-            <div class="tarjeta__texto">
-                <h3>Nacional</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi rerum eum odit quam dolores iure accusamus quo perspiciatis ipsam aliquid?</p>
-            </div>
-        </div>
-        <div class="tarjeta">
-            <div class="tarjeta__imagen">
-                <img src="./assets/images/tarjeta3.jpg">
-                <div class="tarjeta__imagen--boton">
-                    <a href="#"><i class="fas fa-share"></i></a>
-                </div>
-            </div>
-            <div class="tarjeta__texto">
-                <h3>Preparados</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi rerum eum odit quam dolores iure accusamus quo perspiciatis ipsam aliquid?</p>
-            </div>
-        </div>
+
     </div>
 </section>
 
@@ -62,40 +46,17 @@
         <div class="barra"></div>
     </div>
     <div class="marca__contenido">
-        <div class="tarjeta">
+
+        <div class="tarjeta" *ngFor="let servicio of servicios">
             <div class="tarjeta__imagen">
-                <img src="./assets/images/tarjeta4.webp">
+                <img [src]="servicio.imagen">
                 <div class="tarjeta__imagen--boton">
                     <a href="#"><i class="fas fa-share"></i></a>
                 </div>
             </div>
             <div class="tarjeta__texto">
-                <h3>Productos</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi rerum eum odit quam dolores iure accusamus quo perspiciatis ipsam aliquid?</p>
-            </div>
-        </div>
-        <div class="tarjeta">
-            <div class="tarjeta__imagen">
-                <img src="./assets/images/tarjeta5.webp">
-                <div class="tarjeta__imagen--boton">
-                    <a href="#"><i class="fas fa-share"></i></a>
-                </div>
-            </div>
-            <div class="tarjeta__texto">
-                <h3>Bombeo de concreto</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi rerum eum odit quam dolores iure accusamus quo perspiciatis ipsam aliquid?</p>
-            </div>
-        </div>
-        <div class="tarjeta">
-            <div class="tarjeta__imagen">
-                <img src="./assets/images/tarjeta6.webp">
-                <div class="tarjeta__imagen--boton">
-                    <a href="#"><i class="fas fa-share"></i></a>
-                </div>
-            </div>
-            <div class="tarjeta__texto">
-                <h3>Soporte Tecnico</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi rerum eum odit quam dolores iure accusamus quo perspiciatis ipsam aliquid?</p>
+                <h3>{{servicio.titulo}}</h3>
+                <p>{{servicio.texto}}</p>
             </div>
         </div>
     </div>

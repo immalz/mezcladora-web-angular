@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { CardComponent } from './components/cards/card/card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     ContactoComponent,
     AboutComponent,
     DomseguroPipe,
-    LoadingComponent
+    LoadingComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

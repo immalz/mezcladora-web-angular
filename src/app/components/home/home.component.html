@@ -1,96 +1,53 @@
 <section class="landing">
-    <div class="fondo"></div>
-    <div class="sol"></div>
-    <div class="nubes"></div>
-    <div class="ciudad"></div>
-    <div class="camion">
-        <div class="marco"></div>
-    </div>
-</section>
-
-<section class="objetivo">
-    <div class="objetivo__texto">
-        <h2>En <span>GRUINCASAS</span> nos preocupamos por entregar un producto de maxima calidad que supere las expectativas de nuestro clientes</h2>
-    </div>
-    <div class="objetivo__boton">
-        <a routerLink="contacto"><button routerLink="contacto">Solicitar Cotización</button></a>
-    </div>
-</section>
-
-<section class="marca">
-    <div class="marca__titulo">
-        <h2>Marcas con las que Trabajamos</h2>
-        <div class="barra"></div>
-    </div>
-    <div class="marca__contenido">
-
-        <div class="tarjeta" *ngFor="let marca of marcas">
-            <div class="tarjeta__imagen">
-                <img [src]="marca.imagen">
-                <div class="tarjeta__imagen--boton">
-                    <a href="#"><i class="fas fa-share"></i></a>
-                </div>
-            </div>
-            <div class="tarjeta__texto">
-                <h3>{{marca.titulo}}</h3>
-                <p>{{marca.texto}}</p>
+    <div class="slider">
+        <input type="radio" name="slider" checked="checked">
+        <div class="imgBx">
+            <img src="assets/images/banner/imagen1.jpg">
+            <div class="content">
+                <h2>CONCRETO DE CALIDAD</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque perspiciatis repudiandae harum voluptatibus amet voluptas quod minus officia inventore porro.</p>
+                <a [routerLink]="['/inicio']" routerLinkActive="router-link-active">Leer más</a>
             </div>
         </div>
 
-    </div>
-</section>
-
-<section class="marca servicios">
-    <div class="marca__titulo">
-        <h2>Los Servicios de Ofrecemos</h2>
-        <div class="barra"></div>
-    </div>
-    <div class="marca__contenido">
-
-        <div class="tarjeta" *ngFor="let servicio of servicios">
-            <div class="tarjeta__imagen">
-                <img [src]="servicio.imagen">
-                <div class="tarjeta__imagen--boton">
-                    <a href="#"><i class="fas fa-share"></i></a>
-                </div>
-            </div>
-            <div class="tarjeta__texto">
-                <h3>{{servicio.titulo}}</h3>
-                <p>{{servicio.texto}}</p>
+        <input type="radio" name="slider">
+        <div class="imgBx">
+            <img src="assets/images/banner/imagen2.jpg">
+            <div class="content">
+                <h2>NOSOTROS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque perspiciatis repudiandae harum voluptatibus amet voluptas quod minus officia inventore porro.</p>
+                <a [routerLink]="['/nosotros']" routerLinkActive="router-link-active">Conocenos</a>
             </div>
         </div>
-    </div>
-</section>
 
-<section class="anuncio">
-    <div class="anuncio__arriba">
+        <input type="radio" name="slider">
+        <div class="imgBx">
+            <img src="assets/images/banner/imagen3.jpg">
+            <div class="content">
+                <h2>PROYECTOS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque perspiciatis repudiandae harum voluptatibus amet voluptas quod minus officia inventore porro.</p>
+                <a [routerLink]="['/proyectos']" routerLinkActive="router-link-active">Ver proyectos</a>
+            </div>
+        </div>
 
-    </div>
-    <div class="anuncio__abajo">
-        <div class="texto">
-            <h2>En <span>GRUINCASAS</span> entendemos las particularidad de cada uno de sus proyectos, por lo que nos adapatamos segun a las necesidades de cada cliente. </h2>
-            <a href=""><button>Conocenos</button></a>
+        <input type="radio" name="slider">
+        <div class="imgBx">
+            <img src="assets/images/banner/imagen4.jpg">
+            <div class="content">
+                <h2>PRODUCTOS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque perspiciatis repudiandae harum voluptatibus amet voluptas quod minus officia inventore porro.</p>
+                <a [routerLink]="['/productos']" routerLinkActive="router-link-active">Ver todo</a>
+            </div>
         </div>
-        <div class="imagen">
-            <img src="./assets/images/anuncio.png">
-        </div>
-    </div>
-</section>
 
-<section class="marca proyectos">
-    <div class="marca__titulo">
-        <h2>Proyectos Realizados</h2>
-        <div class="barra"></div>
-    </div>
-    <div class="proyecto__video">
-        <div class="video">
-            <iframe src="https://www.youtube.com/embed/23I0O0IBKyI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-            <iframe src="https://www.youtube.com/embed/xNWwFeuideU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-            <iframe src="https://www.youtube.com/embed/2yBjG5rEPkY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <input type="radio" name="slider">
+        <div class="imgBx">
+            <img src="assets/images/banner/imagen5.jpg">
+            <div class="content">
+                <h2>Titulo 5</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque perspiciatis repudiandae harum voluptatibus amet voluptas quod minus officia inventore porro.</p>
+                <a href="#">Leer más</a>
+            </div>
         </div>
     </div>
 </section>

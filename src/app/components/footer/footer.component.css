@@ -1,0 +1,85 @@
+/*----------FOOTER---------*/
+
+.footer {
+    width: 100%;
+    background: var(--bg-light);
+}
+
+.footer .footer__empresa {
+    width: 100%;
+    min-height: 200px;
+    padding: 20px;
+    display: flex;
+}
+
+.footer .footer__empresa .nosotros,
+.footer .footer__empresa .contacto {
+    width: 50%;
+    padding: 20px;
+}
+
+.footer__empresa .nosotros .sociales a {
+    color: var(--bg-dark);
+}
+
+.footer__empresa .nosotros .sociales a i {
+    height: 30px;
+    font-size: 30px;
+    margin: 20px 10px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.footer__empresa .nosotros .sociales a:hover:nth-child(1) i {
+    color: #457fcc;
+}
+
+.footer__empresa .nosotros .sociales a:hover:nth-child(2) i {
+    color: #bc2a8d;
+}
+
+.footer__empresa .nosotros .sociales a:hover:nth-child(3) i {
+    color: #c4302b;
+}
+
+.footer .footer__empresa h3 {
+    font-size: 25px;
+}
+
+.footer .footer__empresa p {
+    color: var(--bg-dark);
+    font-weight: 300;
+    margin: 5px 0;
+}
+
+.footer .footer__empresa p i {
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.footer .footer__corpex {
+    background: var(--bg-dark);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer .footer__corpex span {
+    color: #fff;
+}
+
+.footer .footer__corpex span a {
+    color: var(--color-principal);
+}
+
+@media (max-width: 700px) {
+    .footer .footer__empresa {
+        flex-direction: column;
+    }
+    .footer .footer__empresa .nosotros,
+    .footer .footer__empresa .contacto {
+        width: 100%;
+    }
+}

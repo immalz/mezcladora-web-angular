@@ -1,0 +1,62 @@
+.proyectos {
+    width: 100%;
+}
+
+.proyectos .banner {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/images/proyectos.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.proyectos .banner h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 90px;
+    text-shadow: 0px 20px 30px rgba(0, 0, 0, 0.9);
+}
+
+.proyectos__tarjetas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 40px auto;
+}
+
+.proyectos__tarjetas img {
+    width: 450px;
+    margin: 10px;
+    transition: 0.4s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.09);
+    border-radius: 5px;
+}
+
+.proyectos__tarjetas img:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 700px) {
+    .proyectos .banner h1 {
+        font-size: 70px;
+    }
+    .proyectos__tarjetas img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    .proyectos .banner h1 {
+        font-size: 50px;
+    }
+    .proyectos__tarjetas img {
+        width: 330px;
+    }
+}

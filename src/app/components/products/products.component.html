@@ -1,0 +1,59 @@
+<section class="marca">
+    <div class="marca__titulo">
+        <h2>Marcas con las que Trabajamos</h2>
+        <div class="barra"></div>
+    </div>
+    <div class="marca__contenido">
+
+        <div class="tarjeta" *ngFor="let marca of marcas">
+            <div class="tarjeta__imagen">
+                <img [src]="marca.imagen">
+            </div>
+            <div class="tarjeta__texto">
+                <div class="tarjeta__imagen--boton">
+                    <a href="#"><i class="fas fa-share"></i></a>
+                </div>
+                <h3>{{marca.titulo}}</h3>
+                <p>{{marca.texto}}</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="marca servicios">
+    <div class="marca__titulo">
+        <h2>Los Servicios de Ofrecemos</h2>
+        <div class="barra"></div>
+    </div>
+    <div class="marca__contenido">
+
+        <div class="tarjeta" *ngFor="let servicio of servicios">
+            <div class="tarjeta__imagen">
+                <img [src]="servicio.imagen">
+            </div>
+            <div class="tarjeta__texto">
+                <div class="tarjeta__imagen--boton">
+                    <a href="#"><i class="fas fa-share"></i></a>
+                </div>
+                <h3>{{servicio.titulo}}</h3>
+                <p>{{servicio.texto}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="anuncio">
+    <div class="anuncio__arriba">
+
+    </div>
+    <div class="anuncio__abajo">
+        <div class="texto">
+            <h2>En <span>GRUINCASAS</span> entendemos las particularidad de cada uno de sus proyectos, por lo que nos adapatamos segun a las necesidades de cada cliente. </h2>
+            <a [routerLink]="['/nosotros']"><button>Conocenos</button></a>
+        </div>
+        <div class="imagen">
+            <img src="./assets/images/anuncio.png">
+        </div>
+    </div>
+</section>

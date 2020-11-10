@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 
 export class Categorias {
 
-  private marcas: Categoria[] = 
+  private marcas: Categoria[] =
   [
     {
       titulo: 'Camiones',
@@ -23,9 +23,9 @@ export class Categorias {
       imagen: 'assets/images/tarjeta3.jpg',
       texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi rerum eum odit quam dolores iure accusamus quo perspiciatis ipsam aliquid?'
     },
-  ]
+  ];
 
-  private servicios: Categoria[] = 
+  private servicios: Categoria[] =
   [
     {
       titulo: 'Productos',
@@ -41,18 +41,18 @@ export class Categorias {
       titulo: 'Soporte Tecnico',
       imagen: 'assets/images/tarjeta6.webp',
       texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi rerum eum odit quam dolores iure accusamus quo perspiciatis ipsam aliquid?'
-    },
-  ]
+    }
+  ];
 
-  constructor() { 
-    console.log('Servicio listo para usar!!')
+  constructor() {
+    console.log('Servicio listo para usar!!');
   }
 
-  getMarcas():Categoria[] {
+  getMarcas(): Categoria[] {
     return this.marcas;
   }
 
-  getServicios():Categoria[] {
+  getServicios(): Categoria[] {
     return this.servicios;
   }
 }

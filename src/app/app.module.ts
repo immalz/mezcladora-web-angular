@@ -19,6 +19,8 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProyectsComponent } from './components/proyects/proyects.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutComponent,
     DomseguroPipe,
     LoadingComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsComponent,
+    ProyectsComponent
   ],
   imports: [
     BrowserModule,

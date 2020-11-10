@@ -21,6 +21,68 @@
     text-shadow: 0px 20px 30px rgba(0, 0, 0, 0.9);
 }
 
+.contenido {
+    max-width: 1100px;
+    min-height: 800px;
+    margin: 30px auto;
+}
+
+.contenido__titulo {
+    width: 100%;
+    margin: 60px auto;
+}
+
+.contenido__titulo h2 {
+    position: relative;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.contenido__titulo h2::before {
+    margin: -10px 0;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 5px;
+    background: var(--color-principal);
+}
+
+.contenido__galeria {
+    width: 100%;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr 1fr 1fr;
+    grid-gap: 10px 10px;
+    grid-template-areas: "banner banner banner card1" "banner banner banner card1" "card2 card2 card3 card3";
+}
+
+.contenido__galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenido__galeria img:nth-child(1) {
+    grid-area: banner;
+}
+
+.contenido__galeria img:nth-child(2) {
+    grid-area: card1;
+}
+
+.contenido__galeria img:nth-child(3) {
+    grid-area: card2;
+}
+
+.contenido__galeria img:nth-child(4) {
+    grid-area: card3;
+}
+
+
+/* 
 .proyectos__tarjetas {
     display: flex;
     justify-content: center;
@@ -41,6 +103,14 @@
     transform: scale(1.1);
     transition: 0.4s;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+} */
+
+@media (max-width: 1150px) {
+    .contenido {
+        max-width: 650px;
+        min-height: 800px;
+        margin: 30px auto;
+    }
 }
 
 @media (max-width: 700px) {
@@ -50,13 +120,37 @@
     .proyectos__tarjetas img {
         width: 400px;
     }
+    .contenido__galeria {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "banner banner banner" "banner banner banner" "card1 card2 card3";
+    }
 }
 
-@media (max-width: 400px) {
-    .proyectos .banner h1 {
-        font-size: 50px;
+@media (max-width: 1000px) {
+    .proyectos__tarjetas {
+        width: 95%;
     }
     .proyectos__tarjetas img {
         width: 330px;
+    }
+}
+
+@media (max-width: 750px) {
+    .proyectos__tarjetas img {
+        width: 230px;
+    }
+}
+
+@media (max-width: 450px) {
+    .proyectos .banner h1 {
+        font-size: 55px;
+    }
+    .contenido {
+        max-width: 330px;
+    }
+    .contenido__galeria {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr 1fr;
+        grid-template-areas: "banner card1" "card2 card3";
     }
 }

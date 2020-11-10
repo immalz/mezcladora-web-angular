@@ -37,7 +37,7 @@ import { ProyectsComponent } from './components/proyects/proyects.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot( ROUTES, {useHash: true} ),
+    RouterModule.forRoot( ROUTES, {useHash: true,  scrollPositionRestoration: 'enabled'} ),
     AppRoutingModule
   ],
   providers: [

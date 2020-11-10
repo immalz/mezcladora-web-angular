@@ -3,6 +3,7 @@
 .footer {
     width: 100%;
     background: var(--bg-light);
+    position: relative;
 }
 
 .footer .footer__empresa {
@@ -10,6 +11,7 @@
     min-height: 200px;
     padding: 20px;
     display: flex;
+    position: relative;
 }
 
 .footer .footer__empresa .nosotros,
@@ -72,6 +74,22 @@
 
 .footer .footer__corpex span a {
     color: var(--color-principal);
+}
+
+#camion {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: manejar 10s infinite linear;
+}
+
+@keyframes manejar {
+    0% {
+        transform: translateX(-500px);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
 }
 
 @media (max-width: 700px) {

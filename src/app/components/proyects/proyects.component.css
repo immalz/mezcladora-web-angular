@@ -51,106 +51,241 @@
 
 .contenido__galeria {
     width: 100%;
-    min-height: 700px;
+    margin: auto;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 1fr 1fr 1fr;
-    grid-gap: 10px 10px;
-    grid-template-areas: "banner banner banner card1" "banner banner banner card1" "card2 card2 card3 card3";
+    grid-template-rows: repeat(3, 230px);
+    grid-gap: 15px;
+    transition: .4s;
+    grid-template-areas: "principal principal principal proyecto1" "principal principal principal proyecto1" "proyecto2 proyecto2 proyecto3 proyecto3";
 }
 
-.contenido__galeria img {
+.contenido__galeria .gridItem:hover {
+    background: #f05454;
+}
+
+.contenido__galeria .gridItem {
+    overflow: hidden;
+    background: #214252;
+    box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+}
+
+.contenido__galeria .gridItem img {
+    transition: 0.3s;
+}
+
+.contenido__galeria .gridItem:hover img {
+    transform: scale(1.1) rotate(1deg);
+    transition: 0.3s;
+}
+
+.contenido__galeria .gridItem:nth-child(1) {
+    grid-area: principal;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.contenido__galeria .gridItem:nth-child(1) h2 {
+    position: absolute;
+    z-index: 1001;
+    font-size: 30px;
+    color: white;
+    margin: 20px;
+    text-shadow: 10px 20px 20px rgba(0, 0, 0, .9);
+}
+
+.contenido__galeria .gridItem:nth-child(1) img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.contenido__galeria img:nth-child(1) {
-    grid-area: banner;
+.contenido__galeria .gridItem .imagen {
+    position: relative;
+    overflow: hidden;
 }
 
-.contenido__galeria img:nth-child(2) {
-    grid-area: card1;
+.contenido__galeria .gridItem:nth-child(1)::before,
+.contenido__galeria .gridItem .imagen::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .3);
+    z-index: 1000;
 }
 
-.contenido__galeria img:nth-child(3) {
-    grid-area: card2;
+.contenido__galeria .gridItem .texto {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.contenido__galeria img:nth-child(4) {
-    grid-area: card3;
+.contenido__galeria .gridItem .texto {
+    color: #fff;
 }
 
+.contenido__galeria .gridItem .texto p {
+    font-weight: 200;
+}
 
-/* 
-.proyectos__tarjetas {
+.contenido__galeria .gridItem .texto a i {
+    font-size: 25px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.contenido__galeria .gridItem .texto a:hover i {
+    font-size: 27px;
+    transition: 0.2s;
+}
+
+.contenido__galeria .gridItem:nth-child(2) .texto {
+    width: 100%;
+    height: 50%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: 40px auto;
+    align-items: center;
 }
 
-.proyectos__tarjetas img {
-    width: 450px;
-    margin: 10px;
-    transition: 0.4s;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.09);
-    border-radius: 5px;
+.contenido__galeria .gridItem:nth-child(2) .imagen {
+    width: 100%;
+    height: 50%;
 }
 
-.proyectos__tarjetas img:hover {
-    transform: scale(1.1);
-    transition: 0.4s;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-} */
+.contenido__galeria .gridItem:nth-child(3) .imagen,
+.contenido__galeria .gridItem:nth-child(4) .imagen,
+.contenido__galeria .gridItem:nth-child(3) .texto,
+.contenido__galeria .gridItem:nth-child(4) .texto {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido__galeria .gridItem:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenido__galeria .gridItem:nth-child(4) {
+    background: #f05454;
+}
+
+.contenido__galeria .gridItem:nth-child(4):hover {
+    background: #214252;
+}
+
+.contenido__galeria .gridItem:nth-child(3) .imagen img,
+.contenido__galeria .gridItem:nth-child(4) .imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenido__galeria .gridItem:nth-child(2) {
+    grid-area: proyecto1;
+}
+
+.contenido__galeria .gridItem:nth-child(3) {
+    grid-area: proyecto2;
+    display: flex;
+}
+
+.contenido__galeria .gridItem:nth-child(4) {
+    grid-area: proyecto3;
+    display: flex;
+}
+
+@media (max-width: 1200px) {
+    .contenido__galeria {
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "principal principal principal " "principal principal principal " "proyecto1 proyecto2 proyecto3" "proyecto1 proyecto2 proyecto3 ";
+    }
+    .contenido__galeria .gridItem:nth-child(2),
+    .contenido__galeria .gridItem:nth-child(3),
+    .contenido__galeria .gridItem:nth-child(4) {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido__galeria .gridItem:nth-child(2) .texto,
+    .contenido__galeria .gridItem:nth-child(3) .texto,
+    .contenido__galeria .gridItem:nth-child(4) .texto,
+    .contenido__galeria .gridItem:nth-child(2) .imagen,
+    .contenido__galeria .gridItem:nth-child(3) .imagen,
+    .contenido__galeria .gridItem:nth-child(4) .imagen {
+        width: 100%;
+        height: 50%;
+    }
+    .contenido__galeria .gridItem:nth-child(3),
+    .contenido__galeria .gridItem:nth-child(4):hover {
+        background: #f05454;
+    }
+    .contenido__galeria .gridItem:nth-child(3):hover,
+    .contenido__galeria .gridItem:nth-child(4) {
+        background: #214252;
+    }
+}
+
+@media (max-width: 700px) {
+    .contenido__titulo {
+        padding-left: 20px;
+    }
+    .proyectos .banner h1 {
+        font-size: 50px;
+    }
+    .contenido__galeria .gridItem .texto p {
+        color: #fff;
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .contenido__galeria {
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 180px);
+        grid-template-areas: "principal" "proyecto1 " "proyecto2 " "proyecto3";
+    }
+    .contenido__galeria .gridItem:nth-child(2),
+    .contenido__galeria .gridItem:nth-child(3),
+    .contenido__galeria .gridItem:nth-child(4) {
+        display: flex;
+        flex-direction: row;
+    }
+    .contenido__galeria .gridItem:nth-child(2) .texto,
+    .contenido__galeria .gridItem:nth-child(3) .texto,
+    .contenido__galeria .gridItem:nth-child(4) .texto,
+    .contenido__galeria .gridItem:nth-child(2) .imagen,
+    .contenido__galeria .gridItem:nth-child(3) .imagen,
+    .contenido__galeria .gridItem:nth-child(4) .imagen {
+        width: 50%;
+        height: 100%;
+    }
+}
 
 @media (max-width: 1150px) {
     .contenido {
         max-width: 650px;
         min-height: 800px;
         margin: 30px auto;
-    }
-}
-
-@media (max-width: 700px) {
-    .proyectos .banner h1 {
-        font-size: 70px;
-    }
-    .proyectos__tarjetas img {
-        width: 400px;
-    }
-    .contenido__galeria {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "banner banner banner" "banner banner banner" "card1 card2 card3";
-    }
-}
-
-@media (max-width: 1000px) {
-    .proyectos__tarjetas {
-        width: 95%;
-    }
-    .proyectos__tarjetas img {
-        width: 330px;
-    }
-}
-
-@media (max-width: 750px) {
-    .proyectos__tarjetas img {
-        width: 230px;
-    }
-}
-
-@media (max-width: 450px) {
-    .proyectos .banner h1 {
-        font-size: 55px;
-    }
-    .contenido {
-        max-width: 330px;
-    }
-    .contenido__galeria {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 1fr 1fr;
-        grid-template-areas: "banner card1" "card2 card3";
     }
 }

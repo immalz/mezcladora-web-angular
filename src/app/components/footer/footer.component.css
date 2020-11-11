@@ -4,6 +4,7 @@
     width: 100%;
     background: var(--bg-light);
     position: relative;
+    overflow: hidden;
 }
 
 .footer .footer__empresa {

@@ -3,13 +3,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Pipes
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 // Servicios
 import { Categorias } from './services/categorias.service';
-
+import { ScriptsService } from './services/scripts.service';
 
 // Rutas
 import { ROUTES } from './app.routes';
@@ -21,6 +22,7 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProyectsComponent } from './components/proyects/proyects.component';
+import { ProyectComponent } from './components/proyect/proyect.component';
 
 @NgModule({
   declarations: [
@@ -33,15 +35,18 @@ import { ProyectsComponent } from './components/proyects/proyects.component';
     LoadingComponent,
     FooterComponent,
     ProductsComponent,
-    ProyectsComponent
+    ProyectsComponent,
+    ProyectComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot( ROUTES, {useHash: true,  scrollPositionRestoration: 'enabled'} ),
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
-    Categorias
+    Categorias,
+    ScriptsService
   ],
   bootstrap: [AppComponent]
 })

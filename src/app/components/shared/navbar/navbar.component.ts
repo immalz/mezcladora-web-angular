@@ -3,19 +3,17 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
-  navbar = false;
+  mostrar = false;
+  barras = true;
 
-  estado(): boolean {
-    return this.navbar = !this.navbar;
+  toggle(): boolean {
+    return (
+      this.barras = !this.barras,
+      this.mostrar = !this.mostrar
+    );
   }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

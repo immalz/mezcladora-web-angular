@@ -3,46 +3,42 @@
     <div class="banner">
         <h1>PROYECTOS</h1>
     </div>
-
     <div class="contenido">
-        <div class="contenido__titulo">
-            <h2>Ultimos proyectos</h2>
-        </div>
-        <div class="contenido__galeria">
-            <div class="gridItem">
-                <img src="assets/images/equipo.jpg" alt="">
-                <h2>PROYECTO CENTRAL</h2>
+        <section>
+            <div class="contenido__titulo">
+                <h2>Ultimos proyectos</h2>
             </div>
-            <div class="gridItem">
-                <div class="imagen">
-                    <img src="assets/images/proyectos/obra1.jpg" alt="">
+            <div class="contenido__galeria">
+                <div class="gridItem">
+                    <img src="assets/images/equipo.jpg">
+                    <h2>PROYECTO CENTRAL</h2>
                 </div>
-                <div class="texto">
-                    <h4>PROYECTO 2</h4>
-                    <p>Titulo o dirección del proyecto</p>
-                    <a href="#"><i class="fas fa-plus"></i></a>
-                </div>
-            </div>
-            <div class="gridItem">
-                <div class="imagen">
-                    <img src="assets/images/proyectos/proyecto6.jpg" alt="">
-                </div>
-                <div class="texto">
-                    <h4>PROYECTO 3</h4>
-                    <p>Titulo o dirección del proyecto</p>
-                    <a href="#"><i class="fas fa-plus"></i></a>
+                <div class="gridItem" *ngFor="let dProyecto of ListaProyecto; let i = index">
+                    <div class="imagen">
+                        <img [src]="dProyecto.pImagen">
+                    </div>
+                    <div class="texto">
+                        <h4>{{dProyecto.nombre}}</h4>
+                        <p>{{dProyecto.bDescripcion}}</p>
+                        <a (click)="verProyecto(i)"><i class="fas fa-plus"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="gridItem">
-                <div class="imagen">
-                    <img src="assets/images/newproyecto/proyecto7.jpeg" alt="">
-                </div>
-                <div class="texto">
-                    <h4>PROYECTO 4</h4>
-                    <p>Titulo o dirección del proyecto</p>
-                    <a href="#"><i class="fas fa-plus"></i></a>
+        </section>
+
+        <section class="galeria">
+            <div class="contenido__titulo">
+                <h2>Proyectos pasados</h2>
+            </div>
+            <div class="box" *ngFor="let proyecto of ListaProyectos">
+                <div class="imgBx">
+                    <img [src]="proyecto.imagen">
+                    <div class="content">
+                        <h3>{{proyecto.nombre}}</h3>
+                        <p>{{proyecto.descripcion}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </div>

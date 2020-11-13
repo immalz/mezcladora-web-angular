@@ -1,0 +1,29 @@
+<div class="espacio"></div>
+
+<app-loading *ngIf="loading"></app-loading>
+
+<div *ngIf="!loading" class="animated fadeIn contenedor">
+    <h2>{{Proyecto.nombre}}</h2>
+    <div class="proyecto">
+        <div class="proyecto__galeria">
+            <div class="Limagen">
+                <img [src]="Proyecto.pImagen">
+            </div>
+            <div class="Simagen">
+                <img [src]="Proyecto.sImagen1">
+                <img [src]="Proyecto.sImagen2">
+                <img [src]="Proyecto.sImagen3">
+                <img [src]="Proyecto.sImagen4">
+            </div>
+        </div>
+        <div class="proyecto__descripcion">
+            <h3>{{Proyecto.bDescripcion}}</h3>
+            <p>{{Proyecto.eDescription}}</p>
+            <p>{{Proyecto.fecha}}</p>
+            <p>{{Proyecto.direccion}}</p>
+            <p>{{Proyecto.cliente}}</p>
+        </div>
+    </div>
+
+    <a class="button" [routerLink]="['/proyectos']">Regresar</a>
+</div>

@@ -1,0 +1,128 @@
+/*----------------GALERIA DE IMAGENES------------------*/
+
+.galeria {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: #000;
+    margin: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.galeria .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.galeria .box .imgBx:hover {
+    transform: scale(1.1) rotate(1deg);
+}
+
+.galeria .box .imgBx.active:hover {
+    transform: scale(1) rotate(0deg);
+}
+
+.galeria .box .imgBx.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000000;
+}
+
+.galeria .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.galeria .box .imgBx.active img {
+    position: absolute;
+    top: 150px;
+    left: 200px;
+    right: 200px;
+    bottom: 50px;
+    width: calc(100% - 400px);
+    height: calc(100% - 200px);
+}
+
+.galeria .box .imgBx .content {
+    position: absolute;
+    bottom: 50px;
+    right: 200px;
+    left: 200px;
+    opacity: 0;
+    width: calc(100% - 400px);
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    color: #fff;
+    transform: translateY(100%);
+}
+
+.galeria .box .imgBx.active .content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 0.3s;
+}
+
+.galeria .box .imgBx .content p {
+    font-weight: 200;
+}
+
+.galeria .box .imgBx .content h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+/*----------------RESPONSIVE------------------*/
+
+@media (max-width: 1200px) {
+    .galeria .box .imgBx.active img,
+    .galeria .box .imgBx .content {
+        left: 100px;
+        right: 100px;
+        width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 700px) {
+    .galeria .box .imgBx.active img,
+    .galeria .box .imgBx .content {
+        left: 50px;
+        right: 50px;
+        width: calc(100% - 100px);
+    }
+}
+
+@media (max-width: 560px) {
+    .box {
+        width: 150px;
+        height: 150px;
+        transition: 0.3s;
+    }
+}

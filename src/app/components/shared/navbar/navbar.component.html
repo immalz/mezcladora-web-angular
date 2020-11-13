@@ -1,12 +1,11 @@
 <nav>
-    <div class="logo">GRUINCASAS</div>
-    <input type="checkbox" id="click">
-    <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
-    <ul>
-        <li><a routerLinkActive="active" routerLink="inicio">Inicio</a></li>
-        <li><a routerLinkActive="active" routerLink="nosotros">Nosotros</a></li>
-        <li><a routerLinkActive="active" routerLink="productos">Productos</a></li>
-        <li><a routerLinkActive="active" routerLink="proyectos">Proyectos</a></li>
-        <li><a routerLinkActive="active" routerLink="contacto">Contacto</a></li>
+    <a routerLink="inicio" class="logo">GRUINCASAS</a>
+    <label class="menu-btn" (click)="toggle()"><i [ngClass]="{'fa-bars': barras, 'fa-times': !barras}" class="fas"></i></label>
+    <ul [ngClass]="{'mostrar': mostrar}">
+        <li (click)="toggle()"><a routerLinkActive="active" routerLink="inicio">Inicio</a></li>
+        <li (click)="toggle()"><a routerLinkActive="active" routerLink="nosotros">Nosotros</a></li>
+        <li (click)="toggle()"><a routerLinkActive="active" routerLink="productos">Productos</a></li>
+        <li (click)="toggle()"><a routerLinkActive="active" routerLink="proyectos">Proyectos</a></li>
+        <li (click)="toggle()"><a routerLinkActive="active" routerLink="contacto">Contacto</a></li>
     </ul>
 </nav>

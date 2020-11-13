@@ -11,11 +11,10 @@ export class ProductsComponent implements OnInit {
   marcas: Categoria[] = [];
   servicios: Categoria[] = [];
 
-  constructor(private _categoriaService: Categorias) { }
+  constructor(private categoriaService: Categorias) { }
 
   ngOnInit(): void {
-    this.marcas = this._categoriaService.getMarcas();
-    this.servicios = this._categoriaService.getServicios();
-    console.log(this.marcas);
+    this.marcas = this.categoriaService.getMarcas();
+    this.servicios = this.categoriaService.getServicios();
   }
 }

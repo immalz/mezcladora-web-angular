@@ -60,10 +60,6 @@ nav .menu-btn i {
     display: none;
 }
 
-input[type="checkbox"] {
-    display: none;
-}
-
 .icono-nav {
     font-size: 30px;
     margin: 0 10px;
@@ -95,9 +91,9 @@ input[type="checkbox"] {
     nav .menu-btn i {
         display: block;
     }
-    #click:checked~.menu-btn i:before {
+    /* .menu-btn i:before {
         content: "\f00d";
-    }
+    } */
     nav ul {
         position: fixed;
         top: 80px;
@@ -110,7 +106,7 @@ input[type="checkbox"] {
         display: block;
         transition: all 0.3s ease;
     }
-    #click:checked~ul {
+    nav ul.mostrar {
         left: 0;
     }
     nav ul li {
@@ -125,7 +121,7 @@ input[type="checkbox"] {
         font-weight: 300;
         transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
-    #click:checked~ul li a {
+    nav ul.mostrar li a {
         margin-left: 0px;
     }
     nav ul li a.active,

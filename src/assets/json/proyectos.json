@@ -1,0 +1,33 @@
+[{
+    "nombre": "Nombre del Proyecto",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
+    "imagen": "assets/images/proyectos/proyecto1.jpg"
+}, {
+    "nombre": "Nombre del Proyecto",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
+    "imagen": "assets/images/proyectos/proyecto2.jpg"
+}, {
+    "nombre": "Nombre del Proyecto",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
+    "imagen": "assets/images/proyectos/proyecto3.jpg"
+}, {
+    "nombre": "Nombre del Proyecto",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
+    "imagen": "assets/images/proyectos/proyecto4.jpg"
+}, {
+    "nombre": "Nombre del Proyecto",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
+    "imagen": "assets/images/proyectos/proyecto5.jpg"
+}, {
+    "nombre": "Nombre del Proyecto",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
+    "imagen": "assets/images/proyectos/proyecto6.jpg"
+}, {
+    "nombre": "Nombre del Proyecto",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
+    "imagen": "assets/images/proyectos/obra1.jpg"
+}, {
+    "nombre": "Nombre del Proyecto",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
+    "imagen": "assets/images/proyectos/obra3.jpg"
+}]

@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
+// Youtube Angular
+import { YouTubePlayerModule } from '@angular/youtube-player';
+
 // Pipes
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 
@@ -23,6 +26,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProyectsComponent } from './components/proyects/proyects.component';
 import { ProyectComponent } from './components/proyect/proyect.component';
+import { OldproyectComponent } from './components/oldproyect/oldproyect.component';
 
 @NgModule({
   declarations: [
@@ -36,13 +40,15 @@ import { ProyectComponent } from './components/proyect/proyect.component';
     FooterComponent,
     ProductsComponent,
     ProyectsComponent,
-    ProyectComponent
+    ProyectComponent,
+    OldproyectComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot( ROUTES, {useHash: true,  scrollPositionRestoration: 'enabled'} ),
     AppRoutingModule,
+    YouTubePlayerModule
   ],
   providers: [
     Categorias,

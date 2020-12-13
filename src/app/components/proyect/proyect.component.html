@@ -19,11 +19,16 @@
         <div class="proyecto__descripcion">
             <h3>{{Proyecto.bDescripcion}}</h3>
             <p>{{Proyecto.eDescription}}</p>
-            <p>{{Proyecto.fecha}}</p>
-            <p>{{Proyecto.direccion}}</p>
-            <p>{{Proyecto.cliente}}</p>
+            <p class="icons"><i class="far fa-calendar-alt"></i>{{Proyecto.fecha}}</p>
+            <p class="icons"><i class="fas fa-map-marker-alt"></i>{{Proyecto.direccion}}</p>
+            <p class="icons"><i class="fas fa-user-tie"></i>{{Proyecto.cliente}}</p>
         </div>
     </div>
-
+    <section class="video__galeria">
+        <youtube-player class="video" [videoId]="Proyecto.video" [height]="250" [width]="380">
+        </youtube-player>
+        <youtube-player class="video" [videoId]="Proyecto.video2" [height]="250" [width]="380">
+        </youtube-player>
+    </section>
     <a class="button" [routerLink]="['/proyectos']">Regresar</a>
 </div>

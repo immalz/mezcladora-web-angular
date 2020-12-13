@@ -30,6 +30,17 @@
     transition-delay: 0.75s;
 }
 
+.slider .imgBx::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
 .slider .imgBx img {
     position: absolute;
     top: 0;
@@ -49,11 +60,21 @@
     font-size: 6em;
     line-height: 1em;
     color: #fff;
+    position: relative;
+    z-index: 101;
+    text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.punto {
+    outline: none;
+    border: none;
 }
 
 .slider .imgBx .content p {
+    position: relative;
     font-size: 1.1em;
     color: #fff;
+    z-index: 101;
 }
 
 .slider .imgBx .content a {
@@ -65,6 +86,7 @@
     font-weight: 500;
     margin-top: 20px;
     text-decoration: none;
+    z-index: 101;
 }
 
 .slider input[type="radio"] {

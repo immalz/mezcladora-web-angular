@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
 import { Router } from '@angular/router';
-import { ScriptsService } from '../../services/scripts.service';
 import {ProyectosService, Proyecto} from '../../services/proyectos.service';
+import { ScriptsService } from '../../services/scripts.service';
 
 @Component({
   selector: 'app-proyects',
@@ -12,27 +12,36 @@ export class ProyectsComponent implements OnInit, OnDestroy{
 
   ListaProyectos: Proyecto;
   ListaProyecto: Proyecto;
-  boe: any;
-  boe2: any;
   loading: boolean;
-  constructor(private CargaScripts: ScriptsService, public ps: ProyectosService, private router: Router) {}
+
+  constructor(private scriptService: ScriptsService, public ps: ProyectosService, private router: Router) {}
 
   ngOnInit(): void {
+    this.loading = true;
 
-    this.CargaScripts.Carga(['popup']);
-    this.boe = this.ps.getJson('assets/json/proyectos.json').subscribe((res: any) => {this.ListaProyectos = res; });
+    // Arreglo de Proyectos
+    this.ps.getJson('assets/json/proyectos.json')
+    .subscribe((res: any) => {
+      this.ListaProyectos = res;
+      // console.log('tamaño', this.ListaProyectos.length = 3);
+    });
 
-    this.boe2 = this.ps.getJson('assets/json/proyecto.json').subscribe((res: any) => {this.ListaProyecto = res; });
+    this.ps.getJson('assets/json/proyecto.json')
+    .subscribe((res: any) => {
+      this.ListaProyecto = res;
+      this.loading = false;
+    });
+
+    this.scriptService.Carga(['popup']);
+  }
+  trackByFn(index: number, item: Proyecto): number {
+    return item.id;
   }
 
   verProyecto(idx: number): void {
-    console.log(idx);
     this.router.navigate(['/proyecto', idx]);
   }
 
   ngOnDestroy(): void {
-    this.boe.unsubscribe();
-    this.boe2.unsubscribe();
-    this.CargaScripts.Destruir();
   }
 }

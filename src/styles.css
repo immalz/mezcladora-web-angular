@@ -88,7 +88,7 @@ a.button:hover {
     text-align: center;
     font-size: 30px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
-    z-index: 100;
+    z-index: 999999;
     transition: .7s;
 }
 

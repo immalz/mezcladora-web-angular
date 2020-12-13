@@ -8,7 +8,7 @@ import { ProyectosService, Proyecto } from '../../services/proyectos.service';
 })
 export class ProyectComponent implements OnInit, OnDestroy {
 
-  Proyecto: any;
+  Proyecto: Proyecto;
   ciclo: any;
   loading: boolean;
 
@@ -17,17 +17,22 @@ export class ProyectComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
 
     this.loading = true;
-    this.ciclo = this.activateRoute.params.subscribe(params => {
-      this.ps.getJson('assets/json/proyecto.json').subscribe((res: any) => {
-        this.Proyecto = res[params[`id`]];
 
+    this.activateRoute.params.subscribe(params => {
+      this.ps.getJson('assets/json/proyecto.json').subscribe((res: Proyecto) => {
+        this.Proyecto = res[params[`id`]];
         this.loading = false;
       });
     });
+
+
+    // Youtube Player Media
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    document.body.appendChild(tag);
   }
-  ngOnDestroy(): void {
-    this.ciclo.unsubscribe();
-  }
+
+  ngOnDestroy(): void {}
 
 }
 

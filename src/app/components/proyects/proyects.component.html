@@ -1,19 +1,18 @@
-<div class="espacio" style="height: 80px;"></div>
 <div class="proyectos">
     <div class="banner">
         <h1>PROYECTOS</h1>
     </div>
-    <div class="contenido">
+    <div class="contenido animated fadeIn">
         <section>
             <div class="contenido__titulo">
                 <h2>Ultimos proyectos</h2>
             </div>
             <div class="contenido__galeria">
                 <div class="gridItem">
-                    <img src="assets/images/equipo.jpg">
+                    <img src="assets/images/proyectos/proyecto21.webp">
                     <h2>PROYECTO CENTRAL</h2>
                 </div>
-                <div class="gridItem" *ngFor="let dProyecto of ListaProyecto; let i = index">
+                <div class="gridItem" *ngFor="let dProyecto of ListaProyecto; let i = index;">
                     <div class="imagen">
                         <img [src]="dProyecto.pImagen">
                     </div>
@@ -25,20 +24,20 @@
                 </div>
             </div>
         </section>
-
-        <section class="galeria">
-            <div class="contenido__titulo">
-                <h2>Proyectos pasados</h2>
-            </div>
-            <div class="box" *ngFor="let proyecto of ListaProyectos">
-                <div class="imgBx">
-                    <img [src]="proyecto.imagen">
-                    <div class="content">
-                        <h3>{{proyecto.nombre}}</h3>
-                        <p>{{proyecto.descripcion}}</p>
-                    </div>
+        <div class="contenido__titulo">
+            <h2>Proyectos pasados</h2>
+        </div>
+    </div>
+    <app-loading *ngIf="loading"></app-loading>
+    <section *ngIf="!loading" class="galeria animated fadeIn">
+        <div class="box" *ngFor="let proyecto of ListaProyectos">
+            <div class="imgBx">
+                <img [src]="proyecto.imagen">
+                <div class="content">
+                    <h3>{{proyecto.nombre}}</h3>
+                    <p>{{proyecto.descripcion}}</p>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 </div>

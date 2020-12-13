@@ -4,11 +4,11 @@
 
 .proyectos .banner {
     width: 100%;
-    min-height: 600px;
+    min-height: 680px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/assets/images/proyectos.jpg);
+    background: url('../../../assets/images/proyectos.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -255,13 +255,16 @@
         font-size: 12px;
         padding: 5px;
     }
+    .contenido__galeria .gridItem:nth-child(1) h2 {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 500px) {
     .contenido__galeria {
         width: 90%;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 180px);
+        grid-template-rows: repeat(4, 150px);
         grid-template-areas: "principal" "proyecto1 " "proyecto2 " "proyecto3";
     }
     .contenido__galeria .gridItem:nth-child(2),

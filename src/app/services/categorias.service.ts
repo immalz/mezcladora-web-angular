@@ -10,12 +10,12 @@ export class Categorias {
   [
     {
       titulo: 'Camiones',
-      imagen: 'assets/images/tarjeta1.jpg',
+      imagen: 'assets/images/tarjeta1.webp',
       texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi rerum eum odit quam dolores iure accusamus quo perspiciatis ipsam aliquid?'
     },
     {
       titulo: 'Nacional',
-      imagen: 'assets/images/tarjeta2.jpg',
+      imagen: 'assets/images/tarjeta2.webp',
       texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi rerum eum odit quam dolores iure accusamus quo perspiciatis ipsam aliquid?'
     },
     {

@@ -2,19 +2,34 @@ nav {
     display: flex;
     height: 80px;
     width: 100%;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.0);
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
     flex-wrap: wrap;
     z-index: 1000000;
     position: fixed;
+    transition: 0.4s;
+    border-bottom: 1px solid #fff;
+}
+
+nav.sticky {
+    background: #fff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+}
+
+nav.sticky .logo {
+    color: var(--color-principal);
 }
 
 nav .logo {
     font-size: 25px;
     font-weight: 800;
+    color: #fff;
+    transition: 0.3s;
+}
+
+nav .logo:hover {
     color: var(--color-principal);
 }
 
@@ -29,8 +44,12 @@ nav ul li {
     margin: 0 5px;
 }
 
-nav ul li a {
+nav.sticky ul li a {
     color: #000;
+}
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
     font-size: 15px;
     font-weight: 300;
@@ -54,10 +73,14 @@ nav ul li a:hover {
 }
 
 nav .menu-btn i {
-    color: #000;
+    color: #fff;
     font-size: 22px;
     cursor: pointer;
     display: none;
+}
+
+nav.sticky .menu-btn i {
+    color: #000;
 }
 
 .icono-nav {
@@ -117,6 +140,7 @@ nav .menu-btn i {
         width: 100%;
         margin-left: -100%;
         display: block;
+        color: #000;
         font-size: 20px;
         font-weight: 300;
         transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);

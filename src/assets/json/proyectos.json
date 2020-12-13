@@ -1,33 +1,33 @@
 [{
     "nombre": "Nombre del Proyecto",
     "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
-    "imagen": "assets/images/proyectos/proyecto1.jpg"
+    "imagen": "assets/images/proyectos/proyecto15.webp"
 }, {
     "nombre": "Nombre del Proyecto",
     "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
-    "imagen": "assets/images/proyectos/proyecto2.jpg"
+    "imagen": "assets/images/proyectos/proyecto2.webp"
 }, {
     "nombre": "Nombre del Proyecto",
     "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
-    "imagen": "assets/images/proyectos/proyecto3.jpg"
+    "imagen": "assets/images/proyectos/proyecto3.webp"
 }, {
     "nombre": "Nombre del Proyecto",
     "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
-    "imagen": "assets/images/proyectos/proyecto4.jpg"
+    "imagen": "assets/images/proyectos/proyecto4.webp"
 }, {
     "nombre": "Nombre del Proyecto",
     "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
-    "imagen": "assets/images/proyectos/proyecto5.jpg"
+    "imagen": "assets/images/proyectos/proyecto5.webp"
 }, {
     "nombre": "Nombre del Proyecto",
     "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
-    "imagen": "assets/images/proyectos/proyecto6.jpg"
+    "imagen": "assets/images/proyectos/proyecto6.webp"
 }, {
     "nombre": "Nombre del Proyecto",
     "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
-    "imagen": "assets/images/proyectos/obra1.jpg"
+    "imagen": "assets/images/proyectos/proyecto1.webp"
 }, {
     "nombre": "Nombre del Proyecto",
     "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid inventore neque provident dicta animi rerum voluptatibus quibusdam velit magni!",
-    "imagen": "assets/images/proyectos/obra3.jpg"
+    "imagen": "assets/images/proyectos/proyecto8.webp"
 }]

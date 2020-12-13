@@ -9,11 +9,11 @@
 
 .banner {
     width: 100%;
-    min-height: 600px;
+    min-height: 680px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/assets/images/contacto.webp);
+    background-image: url('../../../assets/images/contacto.webp');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;

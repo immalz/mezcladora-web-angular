@@ -17,8 +17,10 @@ export class ProyectosService {
 }
 
 export interface Proyecto {
+  id: number;
   nombre: string;
   descripcion: string;
   imagen: string;
-  id?: number;
+  fecha: string;
+  direccion: string;
 }
